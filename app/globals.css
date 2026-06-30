@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-50: #faf6f3;
+  --color-warm-100: #f6efea;
+  --color-warm-200: #f3e9e3;
+  --color-warm-300: #e8d9cf;
+  --color-rose: #c77f68;
+  --color-rose-light: #d89a84;
+  --color-rose-dark: #a86550;
+  --color-text-primary: #2c2420;
+  --color-text-muted: #6b5e58;
+  --color-text-subtle: #8a7b74;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-100 text-text-primary font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-text-primary font-semibold tracking-tight;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
